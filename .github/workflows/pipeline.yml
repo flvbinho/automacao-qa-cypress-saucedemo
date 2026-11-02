@@ -1,0 +1,24 @@
+name: Testes E2E - Cypress
+
+# Define quando a pipeline deve rodar automaticamente
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest # Pede uma máquina virtual Linux limpa na nuvem do GitHub
+
+    steps:
+      # 1. Baixa o código mais recente do seu repositório para a máquina virtual
+      - name: Checkout do Código
+        uses: actions/checkout@v4
+
+      # 2. Executa os testes do Cypress usando a action oficial
+      - name: Executar Testes Cypress no Electron
+        uses: cypress-io/github-action@v6
+        with:
+          browser: electron
+          headless: true

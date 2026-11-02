@@ -1,0 +1,8 @@
+{
+  "usuarioValido": "standard_user",
+  "senhaValida": "secret_sauce",
+  "usuarioBloqueado": "locked_out_user",
+  "primeiroNome": "Carlos",
+  "sobrenome": "Silva",
+  "cep": "06000-000"
+}
